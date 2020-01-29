@@ -1,0 +1,8 @@
+<?php
+date_default_timezone_set('Europe/Paris');
+$date = date("Y\-m\-d");
+echo "<br> la date est : "."'$date'"." </br>";
+$fp = fopen('eleve.txt','a+');
+fwrite($fp, 'Dupont');
+fclose($fp);
+?>

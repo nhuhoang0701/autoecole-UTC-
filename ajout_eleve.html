@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <link rel='stylesheet' type='text/css' href='eleve.css'>
+    <meta charset='utf-8'>
+</head>
+<html>
+    <body>
+        <div class='container'>
+            <h1>Ajoutez un nouvel élève</h1>
+            <form action="ajouter_eleve.php" method="POST">
+                <div class="row">
+                    <label class="col-25">Nom d'élève</label>
+                    <div class="col-75">
+                        <input type="text" name="nom" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="col-25">Prénom d'élève</label>
+                    <div class="col-75">
+                        <input type="text" name="prenom" required>
+                    </div>
+                </div>
+               <div class="row">
+                    <label class="col-25">Date de naissance</label>
+                    <div class="col-75">
+                        <input type="date" name="dateNaiss" required>
+                    </div>
+                </div>
+                <div class='row'>
+                    <input class="" type="submit" value="Ajoutez">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

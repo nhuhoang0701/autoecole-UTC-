@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <link rel='stylesheet' type='text/css' href='menu.css'>
+    <meta charset='utf-8'>
+</head>
+<html>
+    <body>
+        <div class="sidenav">
+            <p style='color:white;font-size:40px;margin:0 20px 10px 10px;'>Auto école</p>
+            <a id='acceuil' href='http://tuxa.sme.utc/~nf92a100/accueil.html' target='content'>Acceuil</a>
+            <button class="dropdown-btn">Élève
+            </button>
+            <div class="dropdown-container">
+                <a href="http://tuxa.sme.utc/~nf92a100/ajout_eleve.html" target='content'>Ajouter</a>
+                <a href="http://tuxa.sme.utc/~nf92a100/consultation_eleve.php" target='content'>Consulter</a>
+                <a href="http://tuxa.sme.utc/~nf92a100/inscription_eleve.php" target='content'>Inscrire</a>
+                <a href="http://tuxa.sme.utc/~nf92a100/choix_eleve.php" target='content'>Déinscrire</a>
+                <a href="http://tuxa.sme.utc/~nf92a100/visualisation_calendrier_eleve.php" target='content'>Visualiser calendrier</a>
+                <a href="http://tuxa.sme.utc/~nf92a100/statistique_eleve.php" target='content'>Statistique</a>
+            </div>
+            <button class="dropdown-btn">Thème
+            </button>
+            <div class="dropdown-container">
+                <a href="http://tuxa.sme.utc/~nf92a100/ajout_theme.html" target='content'>Ajouter</a>
+                <a href="http://tuxa.sme.utc/~nf92a100/desactivation_theme.php" target='content'>Désactiver</a>
+            </div>
+            <button class="dropdown-btn">Séance
+            </button>
+            <div class="dropdown-container">
+                <a href="http://tuxa.sme.utc/~nf92a100/ajout_seance.php" target='content'>Ajouter</a>
+                <a href="http://tuxa.sme.utc/~nf92a100/suppression_seance.php" target='content'>Supprimer</a>
+                <a href="http://tuxa.sme.utc/~nf92a100/validation_seance.php" target='content'>Valider</a>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+</html>
